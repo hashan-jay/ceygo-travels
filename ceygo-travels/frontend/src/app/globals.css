@@ -75,6 +75,7 @@ img {
   animation: timer 6.5s linear forwards;
 }
 
+@layer components {
 .btn {
   display: inline-flex;
   align-items: center;
@@ -190,6 +191,7 @@ textarea {
   border: 1px solid rgba(20, 20, 20, 0.15);
   background: #fbfcea;
   padding: 0.75rem 0.9rem;
+}
 }
 
 @keyframes rise {

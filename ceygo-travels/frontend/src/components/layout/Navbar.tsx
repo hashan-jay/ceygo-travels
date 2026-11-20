@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useWishlist } from "@/components/providers/WishlistProvider";
 import { SearchDialog } from "@/components/layout/SearchDialog";
 import { destinations, regionName } from "@/data/destinations";
@@ -22,6 +22,7 @@ export function Navbar() {
   const [citiesOpen, setCitiesOpen] = useState(false);
   const [search, setSearch] = useState(false);
   const [featured, setFeatured] = useState(heroCities[0]);
+  const hoverOpened = useRef(false);
   const featuredCity = destinations.find((item) => item.slug === featured) ?? destinations[0];
 
   useEffect(() => {
@@ -57,7 +58,7 @@ export function Navbar() {
 
   return (
     <>
-      <div className="fixed inset-x-0 top-0 z-50 h-0.5 bg-ink/10">
+      <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-0.5 bg-ink/10">
         <ScrollBar />
       </div>
       <header
@@ -65,17 +66,20 @@ export function Navbar() {
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
           scrolled || mega || menu ? "bg-cream/95 shadow-card backdrop-blur" : "bg-cream/80 backdrop-blur-sm",
         )}
-        onMouseLeave={() => setMega(false)}
+        onMouseLeave={() => {
+          hoverOpened.current = false;
+          setMega(false);
+        }}
       >
         <div className="mx-auto flex h-[4.6rem] max-w-wide items-center justify-between gap-4 px-4 md:px-8">
           <Link href="/" className="flex items-center gap-2" aria-label="CeyGo Travels home">
             <Image
-              src="/brand/cgo-logo.jpg"
+              src="/brand/cgo-mark.png"
               alt=""
-              width={1280}
-              height={1280}
+              width={920}
+              height={420}
               priority
-              className="h-14 w-14 rounded-2xl object-cover"
+              className="h-11 w-auto"
             />
             <span className="hidden text-[0.78rem] font-semibold tracking-[0.16em] sm:block">
               CEY<span className="text-palm">GO</span> <span className="text-saffron">TRAVELS</span>
@@ -83,14 +87,28 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
-            <div onMouseEnter={() => setMega(true)}>
+            <div
+              onMouseEnter={() => {
+                if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+                hoverOpened.current = true;
+                setMega(true);
+              }}
+            >
               <button
                 className={cn(
                   "text-sm font-medium",
                   pathname.startsWith("/destinations") && "underline decoration-saffron decoration-2 underline-offset-8",
                 )}
                 aria-expanded={mega}
-                onClick={() => setMega((value) => !value)}
+                onClick={() => {
+                  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+                  if (canHover && hoverOpened.current) {
+                    hoverOpened.current = false;
+                    setMega(true);
+                    return;
+                  }
+                  setMega((value) => !value);
+                }}
               >
                 Destinations
               </button>
