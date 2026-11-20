@@ -58,21 +58,19 @@ export default async function DestinationPage({ params }: { params: Promise<Para
           },
         ]}
       />
-      <article className="pb-10 pt-28">
-        <div className="px-5 md:px-8">
-          <div className="relative mx-auto h-[58vh] min-h-[380px] max-w-wide overflow-hidden rounded-[32px]">
+      <article className="pb-10 pt-24 md:pt-28">
+        <div className="px-4 sm:px-5 md:px-8">
+          <div className="relative mx-auto h-[46vh] min-h-[280px] max-w-wide overflow-hidden rounded-[24px] sm:h-[58vh] sm:min-h-[380px] sm:rounded-[32px]">
             <Image src={city.image} alt={city.gallery[0]?.alt ?? city.name} fill priority sizes="100vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
-            <div className="absolute bottom-0 flex w-full items-end justify-between gap-4 p-6 text-cream md:p-10">
-              <div>
-                <p className="text-xs uppercase tracking-[0.16em] text-saffron">{regionName(city.region)}</p>
-                <h1 className="font-display text-5xl tracking-tight md:text-7xl">{city.name}</h1>
-              </div>
-              <SaveButton kind="city" slug={city.slug} label={city.name} />
+            <SaveButton kind="city" slug={city.slug} label={city.name} className="absolute right-3 top-3 sm:right-5 sm:top-5" />
+            <div className="absolute inset-x-0 bottom-0 p-4 text-cream sm:p-6 md:p-10">
+              <p className="text-xs uppercase tracking-[0.16em] text-saffron">{regionName(city.region)}</p>
+              <h1 className="font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">{city.name}</h1>
             </div>
           </div>
         </div>
-        <div className="mx-auto grid max-w-page gap-12 px-5 py-12 md:px-8 lg:grid-cols-[1.3fr_0.7fr]">
+        <div className="mx-auto grid max-w-page gap-12 px-4 py-12 sm:px-5 md:px-8 lg:grid-cols-[1.3fr_0.7fr]">
           <div>
             <Breadcrumbs
               items={[
@@ -123,7 +121,7 @@ export default async function DestinationPage({ params }: { params: Promise<Para
             </Link>
           </aside>
         </div>
-        <div className="mx-auto max-w-page px-5 md:px-8">
+        <div className="mx-auto max-w-page px-4 sm:px-5 md:px-8">
           <h2 className="font-display text-4xl">In the frame</h2>
           <div className="mt-5 grid gap-3 md:grid-cols-3">
             {city.gallery.map((photo) => (
@@ -135,7 +133,7 @@ export default async function DestinationPage({ params }: { params: Promise<Para
           </div>
         </div>
         {relatedExperiences.length ? (
-          <div className="mx-auto mt-16 max-w-page px-5 md:px-8">
+          <div className="mx-auto mt-16 max-w-page px-4 sm:px-5 md:px-8">
             <h2 className="font-display text-4xl">Experiences from here</h2>
             <div className="mt-6 grid gap-4">
               {relatedExperiences.map((item) => (
@@ -145,7 +143,7 @@ export default async function DestinationPage({ params }: { params: Promise<Para
           </div>
         ) : null}
         {relatedJourneys.length ? (
-          <div className="mx-auto mt-16 max-w-page px-5 md:px-8">
+          <div className="mx-auto mt-16 max-w-page px-4 sm:px-5 md:px-8">
             <h2 className="font-display text-4xl">Journeys that stay here</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               {relatedJourneys.map((journey) => (

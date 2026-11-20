@@ -43,11 +43,11 @@ const seasonTabs = [
 
 export function ExperienceRail() {
   return (
-    <div className="-mx-5 flex gap-4 overflow-x-auto px-5 pb-2 md:-mx-0 md:px-0">
+    <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:-mx-5 sm:px-5 md:mx-0 md:px-0">
       {experiences.slice(0, 8).map((item) => {
         const city = destinations.find((entry) => entry.slug === item.destination);
         return (
-          <article key={item.slug} className="group relative w-[78vw] shrink-0 snap-start overflow-hidden rounded-[28px] bg-ink text-cream sm:w-[340px]">
+          <article key={item.slug} className="group relative w-[78vw] max-w-[340px] shrink-0 snap-start overflow-hidden rounded-[28px] bg-ink text-cream sm:w-[340px]">
             <Link href={`/experiences/${item.slug}`} className="block">
               <div className="relative h-64">
                 <Image src={item.image} alt="" fill sizes="340px" className="card-media object-cover opacity-90" />

@@ -5,7 +5,7 @@ import { NewsletterForm } from "@/components/layout/NewsletterForm";
 
 export function Footer() {
   return (
-    <footer className="bg-ink px-5 pb-28 pt-16 text-cream md:px-8 md:pb-16">
+    <footer className="bg-ink px-4 pb-[calc(6.5rem+env(safe-area-inset-bottom))] pt-14 text-cream sm:px-5 md:px-8 md:pb-16 md:pt-16">
       <div className="mx-auto grid max-w-page gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
         <div>
           <p className="text-sm font-semibold tracking-[0.18em]">

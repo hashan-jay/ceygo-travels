@@ -10,10 +10,10 @@ export const metadata = pageMeta({
 
 export default function PrivacyPage() {
   return (
-    <section className="px-5 pb-20 pt-32 md:px-8">
+    <section className="px-4 pb-16 pt-24 sm:px-5 md:px-8 md:pb-20 md:pt-32">
       <div className="mx-auto max-w-3xl">
         <Eyebrow>Privacy</Eyebrow>
-        <h1 className="mt-4 font-display text-5xl tracking-tight">What this preview keeps.</h1>
+        <h1 className="mt-4 font-display text-4xl tracking-tight sm:text-5xl">What this preview keeps.</h1>
         <div className="prose-cey mt-6 text-lg leading-relaxed text-mute">
           <p>
             This frontend does not send your details to a server. A shortlist, a newsletter address, and a trip enquiry are saved in local storage on your own device so the screens can remember them.

@@ -57,7 +57,7 @@ export function JourneyCard({ journey }: { journey: Journey }) {
         <Link href={`/journeys/${journey.slug}`}>{journey.title}</Link>
       </h3>
       <p className="mt-3 text-sm leading-relaxed text-mute">{journey.subtitle}</p>
-      <p className="mt-4 text-sm">
+      <p className="mt-4 text-sm leading-relaxed">
         {journey.route.map((slug) => destinationName(slug)).join(" → ")}
       </p>
       <p className="mt-auto pt-6 font-medium">From {formatUsd(journey.priceFrom)} <span className="font-normal text-mute">/ person, sample</span></p>

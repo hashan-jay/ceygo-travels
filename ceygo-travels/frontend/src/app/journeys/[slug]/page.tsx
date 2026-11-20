@@ -61,21 +61,21 @@ export default async function JourneyPage({ params }: { params: Promise<Params> 
           },
         ]}
       />
-      <article className="pb-8 pt-28">
-        <div className="px-5 md:px-8">
-          <div className="relative mx-auto h-[48vh] min-h-[320px] max-w-wide overflow-hidden rounded-[32px]">
+      <article className="pb-8 pt-24 md:pt-28">
+        <div className="px-4 sm:px-5 md:px-8">
+          <div className="relative mx-auto h-[42vh] min-h-[260px] max-w-wide overflow-hidden rounded-[24px] sm:h-[48vh] sm:min-h-[320px] sm:rounded-[32px]">
             <Image src={journey.image} alt="" fill priority className="object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/75 to-ink/10" />
-            <div className="absolute bottom-0 p-6 text-cream md:p-10">
+            <div className="absolute inset-x-0 bottom-0 p-4 text-cream sm:p-6 md:p-10">
               <p className="text-xs uppercase tracking-[0.16em] text-saffron">{journey.days} days · {paceLabel[journey.pace]}</p>
-              <h1 className="mt-2 max-w-3xl font-display text-5xl tracking-tight md:text-7xl">{journey.title}</h1>
+              <h1 className="mt-2 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">{journey.title}</h1>
             </div>
           </div>
         </div>
-        <div className="mx-auto grid max-w-page gap-12 px-5 py-10 md:px-8 lg:grid-cols-[1.3fr_0.7fr]">
+        <div className="mx-auto grid max-w-page gap-12 px-4 py-10 sm:px-5 md:px-8 lg:grid-cols-[1.3fr_0.7fr]">
           <div>
             <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/journeys", label: "Journeys" }, { label: journey.title }]} />
-            <div className="mt-6 flex items-start justify-between gap-4">
+            <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:justify-between">
               <p className="font-display text-3xl leading-snug">{journey.subtitle}</p>
               <SaveButton kind="journey" slug={journey.slug} label={journey.title} />
             </div>

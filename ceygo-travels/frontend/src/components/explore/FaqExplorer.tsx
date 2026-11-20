@@ -22,7 +22,7 @@ export function FaqExplorer() {
   return (
     <div>
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <div className="flex gap-2 overflow-x-auto">
+        <div className="flex max-w-full gap-2 overflow-x-auto pb-1">
           {groups.map((item) => (
             <button
               key={item}

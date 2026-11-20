@@ -13,10 +13,10 @@ export const metadata = pageMeta({
 export default function JourneysPage() {
   return (
     <>
-      <section className="px-5 pb-10 pt-32 md:px-8">
+      <section className="px-4 pb-10 pt-24 sm:px-5 md:px-8 md:pt-32">
         <div className="mx-auto max-w-page">
           <Eyebrow>Journeys</Eyebrow>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl tracking-tight md:text-7xl">
+          <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">
             Routes with the empty hours left in.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-mute">

@@ -36,7 +36,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "scroll-mt-28 px-5 py-20 md:px-8 md:py-28",
+        "scroll-mt-24 px-4 py-14 sm:px-5 sm:py-20 md:scroll-mt-28 md:px-8 md:py-28",
         tone === "paper" && "bg-paper",
         tone === "ink" && "bg-ink text-cream",
         className,
@@ -66,7 +66,7 @@ export function SectionHeading({
         {eyebrow ? <Eyebrow light={light}>{eyebrow}</Eyebrow> : null}
         <h2
           className={cn(
-            "font-display text-4xl leading-[1.02] tracking-tight md:text-5xl",
+            "font-display text-[2rem] leading-[1.02] tracking-tight sm:text-4xl md:text-5xl",
             eyebrow && "mt-4",
           )}
         >
@@ -135,7 +135,7 @@ export function CtaBand({
   secondary?: { href: string; label: string };
 }) {
   return (
-    <section className="px-5 pb-20 md:px-8">
+    <section className="px-4 pb-16 sm:px-5 md:px-8 md:pb-20">
       <div className="mx-auto flex max-w-page flex-col gap-8 rounded-[32px] bg-ink px-6 py-12 text-cream md:flex-row md:items-end md:justify-between md:px-12 md:py-14">
         <div className="max-w-xl">
           <h2 className="font-display text-4xl leading-[1.02] tracking-tight md:text-5xl">{title}</h2>

@@ -71,17 +71,17 @@ export function Navbar() {
           setMega(false);
         }}
       >
-        <div className="mx-auto flex h-[4.6rem] max-w-wide items-center justify-between gap-4 px-4 md:px-8">
-          <Link href="/" className="flex items-center gap-2" aria-label="CeyGo Travels home">
+        <div className="mx-auto flex h-16 max-w-wide items-center justify-between gap-2 px-3 sm:h-[4.6rem] sm:gap-4 sm:px-4 md:px-8">
+          <Link href="/" className="flex min-w-0 items-center gap-2" aria-label="CeyGo Travels home">
             <Image
               src="/brand/cgo-mark.png"
               alt=""
               width={920}
               height={420}
               priority
-              className="h-11 w-auto"
+              className="h-9 w-auto sm:h-11"
             />
-            <span className="hidden text-[0.78rem] font-semibold tracking-[0.16em] sm:block">
+            <span className="hidden text-[0.78rem] font-semibold tracking-[0.16em] lg:block">
               CEY<span className="text-palm">GO</span> <span className="text-saffron">TRAVELS</span>
             </span>
           </Link>
@@ -207,12 +207,12 @@ export function Navbar() {
       </header>
 
       {menu ? (
-        <div id="mobile-nav" className="fixed inset-0 z-40 overflow-y-auto bg-cream px-5 pb-28 pt-24 lg:hidden">
+        <div id="mobile-nav" className="fixed inset-0 z-40 overflow-y-auto bg-cream px-4 pb-10 pt-20 sm:px-5 sm:pt-24 lg:hidden">
           <button className="btn btn-line mb-6" onClick={() => setSearch(true)}>
             Search the island
           </button>
           <button
-            className="flex w-full items-center justify-between border-t border-ink/10 py-4 text-left font-display text-4xl"
+            className="flex w-full items-center justify-between border-t border-ink/10 py-3.5 text-left font-display text-3xl sm:py-4 sm:text-4xl"
             aria-expanded={citiesOpen}
             onClick={() => setCitiesOpen((value) => !value)}
           >
@@ -240,14 +240,14 @@ export function Navbar() {
             </div>
           ) : null}
           {navLinks.slice(1).map((link) => (
-            <Link key={link.href} href={link.href} className="block border-t border-ink/10 py-4 font-display text-4xl">
+            <Link key={link.href} href={link.href} className="block border-t border-ink/10 py-3.5 font-display text-3xl sm:py-4 sm:text-4xl">
               {link.label}
             </Link>
           ))}
-          <Link href="/gallery" className="block border-t border-ink/10 py-4 font-display text-4xl">
+          <Link href="/gallery" className="block border-t border-ink/10 py-3.5 font-display text-3xl sm:py-4 sm:text-4xl">
             Gallery
           </Link>
-          <Link href="/contact" className="block border-t border-ink/10 py-4 font-display text-4xl">
+          <Link href="/contact" className="block border-t border-ink/10 py-3.5 font-display text-3xl sm:py-4 sm:text-4xl">
             Contact
           </Link>
           <Link href="/plan" className="btn btn-saffron mt-6">
@@ -286,7 +286,7 @@ export function MobileDock() {
   const pathname = usePathname();
   if (pathname === "/plan") return null;
   return (
-    <div className="fixed inset-x-0 bottom-0 z-30 border-t border-ink/10 bg-cream/95 p-3 backdrop-blur md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-30 border-t border-ink/10 bg-cream/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden">
       <div className="grid grid-cols-2 gap-2">
         <Link href="/destinations" className="btn btn-line">
           Cities

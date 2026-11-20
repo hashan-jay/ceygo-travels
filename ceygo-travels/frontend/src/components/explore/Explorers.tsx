@@ -16,7 +16,7 @@ export function DestinationExplorer() {
 
   return (
     <div>
-      <div className="flex gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Filter by region">
+      <div className="flex max-w-full gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Filter by region">
         <FilterChip active={region === "all"} onClick={() => setRegion("all")} label="All regions" />
         {regions.map((item) => (
           <FilterChip
@@ -43,7 +43,7 @@ export function ExperienceExplorer() {
 
   return (
     <div>
-      <div className="flex gap-2 overflow-x-auto pb-2">
+      <div className="flex max-w-full gap-2 overflow-x-auto pb-2">
         <FilterChip active={interest === "all"} onClick={() => setInterest("all")} label="All themes" />
         {interestOptions.map((item) => (
           <FilterChip key={item.id} active={interest === item.id} onClick={() => setInterest(item.id)} label={item.label} />

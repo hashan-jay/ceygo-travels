@@ -60,7 +60,7 @@ export function GalleryExplorer() {
 
   return (
     <div>
-      <div className="flex gap-2 overflow-x-auto pb-4">
+      <div className="flex max-w-full gap-2 overflow-x-auto pb-4">
         <button onClick={() => setRegion("all")} className={cn("shrink-0 rounded-full border px-4 py-2 text-sm", region === "all" ? "bg-ink text-cream" : "bg-paper")}>
           All
         </button>

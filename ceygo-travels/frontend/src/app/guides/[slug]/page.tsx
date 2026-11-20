@@ -48,7 +48,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
           },
         ]}
       />
-      <article className="px-5 pb-8 pt-32 md:px-8">
+      <article className="px-4 pb-8 pt-24 sm:px-5 md:px-8 md:pt-32">
         <div className="mx-auto grid max-w-page gap-10 lg:grid-cols-[0.7fr_1.3fr]">
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/guides", label: "Field notes" }, { label: guide.title }]} />
@@ -62,7 +62,7 @@ export default async function GuidePage({ params }: { params: Promise<Params> })
             </nav>
           </aside>
           <div>
-            <h1 className="font-display text-5xl tracking-tight md:text-6xl">{guide.title}</h1>
+            <h1 className="font-display text-4xl tracking-tight sm:text-5xl md:text-6xl">{guide.title}</h1>
             <p className="mt-4 text-lg text-mute">{guide.excerpt}</p>
             <div className="relative mt-6 h-72 overflow-hidden rounded-[28px]">
               <Image src={guide.image} alt="" fill priority className="object-cover" sizes="(min-width: 1024px) 60vw, 100vw" />

@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <section className="px-5 pb-24 pt-36 md:px-8">
+    <section className="px-4 pb-24 pt-28 sm:px-5 md:px-8 md:pt-36">
       <div className="mx-auto max-w-3xl">
         <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-palm-ink">404</p>
-        <h1 className="mt-4 font-display text-5xl tracking-tight md:text-7xl">This page is not on the route.</h1>
+        <h1 className="mt-4 font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">This page is not on the route.</h1>
         <p className="mt-4 text-lg text-mute">
           The link may be old, or the city has not been added yet. The island is still there.
         </p>

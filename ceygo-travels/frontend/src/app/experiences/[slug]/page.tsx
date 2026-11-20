@@ -39,17 +39,17 @@ export default async function ExperiencePage({ params }: { params: Promise<Param
           { name: item.title, path: `/experiences/${item.slug}` },
         ])}
       />
-      <article className="pb-8 pt-28">
-        <div className="px-5 md:px-8">
-          <div className="relative mx-auto h-[50vh] min-h-[340px] max-w-wide overflow-hidden rounded-[32px]">
+      <article className="pb-8 pt-24 md:pt-28">
+        <div className="px-4 sm:px-5 md:px-8">
+          <div className="relative mx-auto h-[40vh] min-h-[220px] max-w-wide overflow-hidden rounded-[24px] sm:h-[50vh] sm:min-h-[340px] sm:rounded-[32px]">
             <Image src={item.image} alt={city?.gallery[0]?.alt ?? item.title} fill priority className="object-cover" sizes="100vw" />
           </div>
         </div>
-        <div className="mx-auto grid max-w-page gap-12 px-5 py-10 md:px-8 lg:grid-cols-[1.25fr_0.75fr]">
+        <div className="mx-auto grid max-w-page gap-12 px-4 py-10 sm:px-5 md:px-8 lg:grid-cols-[1.25fr_0.75fr]">
           <div>
             <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/experiences", label: "Experiences" }, { label: item.title }]} />
-            <div className="mt-6 flex items-start justify-between gap-4">
-              <h1 className="font-display text-5xl tracking-tight md:text-6xl">{item.title}</h1>
+            <div className="mt-6 flex flex-col items-start gap-4 sm:flex-row sm:justify-between">
+              <h1 className="font-display text-4xl tracking-tight sm:text-5xl md:text-6xl">{item.title}</h1>
               <SaveButton kind="experience" slug={item.slug} label={item.title} />
             </div>
             <p className="mt-4 text-lg text-mute">{item.excerpt}</p>

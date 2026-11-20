@@ -64,7 +64,7 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
         role="dialog"
         aria-modal="true"
         aria-labelledby="search-title"
-        className="relative mx-auto mt-20 w-[min(680px,calc(100%-1.5rem))] overflow-hidden rounded-3xl bg-paper shadow-lift"
+        className="relative mx-auto mt-16 max-h-[calc(100dvh-5.5rem)] w-[min(680px,calc(100%-1.5rem))] overflow-y-auto rounded-3xl bg-paper shadow-lift sm:mt-20"
       >
         <h2 id="search-title" className="sr-only">
           Search CeyGo Travels

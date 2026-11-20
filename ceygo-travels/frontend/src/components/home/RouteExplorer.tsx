@@ -19,7 +19,7 @@ export function RouteExplorer() {
     <div>
       <div className="relative">
         <div className="pointer-events-none absolute left-0 right-0 top-5 hidden h-px bg-ink/15 md:block" />
-        <div className="flex gap-3 overflow-x-auto pb-2">
+        <div className="flex max-w-full gap-3 overflow-x-auto pb-2">
           {stops.map((stop, index) => (
             <button
               key={stop.slug}

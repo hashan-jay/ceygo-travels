@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <section className="px-5 pb-8 md:px-8">
+      <section className="px-4 pb-8 sm:px-5 md:px-8">
         <div className="mx-auto grid max-w-page gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {practicalFacts.map((fact) => (
             <article key={fact.label} className="rounded-3xl border border-ink/10 bg-paper p-5">
@@ -77,12 +77,12 @@ export default function HomePage() {
           text="Fifteen bases, from the airport lagoon to Jaffna. Save the ones that pull you. The route comes after."
           action={<Link href="/destinations" className="btn btn-line">All destinations</Link>}
         />
-        <div className="mt-10 grid gap-3 md:grid-cols-4 md:grid-rows-2">
+        <div className="-mx-4 mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:-mx-5 sm:px-5 md:mx-0 md:mt-10 md:grid md:grid-cols-4 md:grid-rows-2 md:overflow-visible md:px-0">
           {featured.map((city, index) => (
             <Link
               key={city.slug}
               href={`/destinations/${city.slug}`}
-              className={`group relative min-h-64 overflow-hidden rounded-[28px] ${index === 0 ? "md:col-span-2 md:row-span-2 md:min-h-[540px]" : ""} ${index === 1 ? "md:col-span-2" : ""}`}
+              className={`group relative h-72 w-[78vw] shrink-0 snap-start overflow-hidden rounded-[28px] md:h-auto md:w-auto md:min-h-64 ${index === 0 ? "md:col-span-2 md:row-span-2 md:min-h-[540px]" : ""} ${index === 1 ? "md:col-span-2" : ""}`}
             >
               <Image src={city.image} alt={city.gallery[0]?.alt ?? city.name} fill sizes="(min-width: 768px) 50vw, 100vw" className="card-media object-cover" />
               <span className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/10 to-transparent" />

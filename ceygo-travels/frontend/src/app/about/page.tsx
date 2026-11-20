@@ -26,10 +26,10 @@ const pillars = [
 export default function AboutPage() {
   return (
     <>
-      <section className="px-5 pb-8 pt-32 md:px-8">
+      <section className="px-4 pb-8 pt-24 sm:px-5 md:px-8 md:pt-32">
         <div className="mx-auto max-w-page">
           <Eyebrow>About</Eyebrow>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl tracking-tight md:text-7xl">
+          <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">
             A local desk for people who have never driven on the left.
           </h1>
           <div className="mt-6 max-w-2xl">

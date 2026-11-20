@@ -13,10 +13,10 @@ export const metadata = pageMeta({
 
 export default function GuidesPage() {
   return (
-    <section className="px-5 pb-20 pt-32 md:px-8">
+    <section className="px-4 pb-16 pt-24 sm:px-5 md:px-8 md:pb-20 md:pt-32">
       <div className="mx-auto max-w-page">
         <Eyebrow>Field notes</Eyebrow>
-        <h1 className="mt-4 max-w-3xl font-display text-5xl tracking-tight md:text-7xl">Read this before you fall for a map.</h1>
+        <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">Read this before you fall for a map.</h1>
         <p className="mt-5 max-w-2xl text-lg text-mute">
           Practical writing for people visiting Sri Lanka from abroad. Rules that change — visas especially — are pointed at the official source, not frozen here.
         </p>

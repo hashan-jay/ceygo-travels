@@ -37,18 +37,18 @@ export function TripPlanner() {
 
   return (
     <div className="rounded-[32px] border border-ink/10 bg-paper p-5 shadow-card md:p-8">
-      <ol className="grid grid-cols-4 gap-2">
+      <ol className="grid grid-cols-4 gap-1.5 sm:gap-2">
         {steps.map((label, index) => (
           <li key={label}>
             <button
               onClick={() => setStep(index)}
               className={cn(
-                "w-full rounded-2xl px-2 py-3 text-left text-sm",
+                "w-full rounded-2xl px-1.5 py-2.5 text-left text-xs sm:px-2 sm:py-3 sm:text-sm",
                 step === index ? "bg-ink text-cream" : "bg-cream",
               )}
             >
-              <span className="block text-[0.68rem] uppercase tracking-[0.14em] opacity-70">0{index + 1}</span>
-              {label}
+              <span className="block text-[0.62rem] uppercase tracking-[0.12em] opacity-70 sm:text-[0.68rem] sm:tracking-[0.14em]">0{index + 1}</span>
+              <span className="block truncate">{label}</span>
             </button>
           </li>
         ))}
@@ -58,13 +58,13 @@ export function TripPlanner() {
         <div className="mt-8">
           <h2 className="font-display text-4xl">When can you land?</h2>
           <p className="mt-2 text-mute">The month chooses the coast. The length chooses how many regions are honest.</p>
-          <div className="mt-6 grid grid-cols-3 gap-2 sm:grid-cols-4">
+          <div className="mt-6 grid grid-cols-3 gap-1.5 sm:grid-cols-4 sm:gap-2">
             {months.map((name, index) => (
               <button
                 key={name}
                 onClick={() => setMonth(index)}
                 className={cn(
-                  "rounded-2xl border px-3 py-3 text-sm",
+                  "rounded-2xl border px-2 py-3 text-sm",
                   month === index ? "border-ink bg-saffron" : "border-ink/10",
                 )}
               >

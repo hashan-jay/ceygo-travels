@@ -11,10 +11,10 @@ export const metadata = pageMeta({
 
 export default function GalleryPage() {
   return (
-    <section className="px-5 pb-20 pt-32 md:px-8">
+    <section className="px-4 pb-16 pt-24 sm:px-5 md:px-8 md:pb-20 md:pt-32">
       <div className="mx-auto max-w-wide">
         <Eyebrow>Gallery</Eyebrow>
-        <h1 className="mt-4 max-w-3xl font-display text-5xl tracking-tight md:text-7xl">The island, before you pack.</h1>
+        <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">The island, before you pack.</h1>
         <p className="mt-5 max-w-2xl text-lg text-mute">
           Filter by region and open a frame. Photographs are from Wikimedia Commons contributors and credited on the credits page.
         </p>

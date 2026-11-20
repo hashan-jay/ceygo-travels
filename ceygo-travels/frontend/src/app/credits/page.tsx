@@ -12,10 +12,10 @@ export default function CreditsPage() {
   const unique = Array.from(new Map(allPhotos.map((photo) => [photo.src, photo])).values());
 
   return (
-    <section className="px-5 pb-20 pt-32 md:px-8">
+    <section className="px-4 pb-16 pt-24 sm:px-5 md:px-8 md:pb-20 md:pt-32">
       <div className="mx-auto max-w-3xl">
         <Eyebrow>Credits</Eyebrow>
-        <h1 className="mt-4 font-display text-5xl tracking-tight">Photographs</h1>
+        <h1 className="mt-4 font-display text-4xl tracking-tight sm:text-5xl">Photographs</h1>
         <p className="mt-4 text-lg text-mute">
           Destination photography is drawn from Wikimedia Commons. The CeyGo logo is the organization’s own mark. Replace these frames when CeyGo supplies its photography.
         </p>

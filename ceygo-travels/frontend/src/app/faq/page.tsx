@@ -15,10 +15,10 @@ export default function FaqPage() {
   return (
     <>
       <JsonLd data={faqJsonLd(faqs)} />
-      <section className="px-5 pb-8 pt-32 md:px-8">
+      <section className="px-4 pb-8 pt-24 sm:px-5 md:px-8 md:pt-32">
         <div className="mx-auto max-w-page">
           <Eyebrow>FAQ</Eyebrow>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl tracking-tight md:text-7xl">Questions, answered in the open.</h1>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">Questions, answered in the open.</h1>
           <p className="mt-5 max-w-2xl text-lg text-mute">
             Planning, life on the island, and how this preview handles an enquiry. Search or filter if you are here for one thing.
           </p>

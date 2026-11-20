@@ -21,10 +21,10 @@ export default function DestinationsPage() {
           { name: "Destinations", path: "/destinations" },
         ])}
       />
-      <section className="px-5 pb-8 pt-32 md:px-8">
+      <section className="px-4 pb-8 pt-24 sm:px-5 md:px-8 md:pt-32">
         <div className="mx-auto max-w-page">
           <Eyebrow>Destinations</Eyebrow>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl tracking-tight md:text-7xl">
+          <h1 className="mt-4 max-w-3xl font-display text-4xl tracking-tight sm:text-5xl md:text-7xl">
             Cities worth staying, not just seeing.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-mute">
