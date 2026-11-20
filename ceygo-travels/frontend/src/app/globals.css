@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --cream: #fbfcea;
+  --ink: #141414;
+  --saffron: #f69f00;
+  --palm: #16b908;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--saffron);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-enter {
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js .reveal:not(.is-in) {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 42s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ken {
+  animation: ken 16s ease-in-out alternate infinite;
+}
+
+.hero-timer {
+  transform-origin: left center;
+  animation: timer 6.5s linear forwards;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-ink {
+  background: #141414;
+  color: #fbfcea;
+}
+
+.btn-ink:hover {
+  background: #f69f00;
+  color: #141414;
+}
+
+.btn-saffron {
+  background: #f69f00;
+  color: #141414;
+}
+
+.btn-saffron:hover {
+  background: #141414;
+  color: #fbfcea;
+}
+
+.btn-line {
+  background: transparent;
+  color: #141414;
+  border-color: rgba(20, 20, 20, 0.18);
+}
+
+.btn-line:hover {
+  border-color: #141414;
+  background: #fffef8;
+}
+
+.btn-light {
+  background: #fbfcea;
+  color: #141414;
+}
+
+.btn-light:hover {
+  background: #f69f00;
+}
+
+.card-media {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .card-media {
+  transform: scale(1.06);
+}
+
+.masonry {
+  columns: 1;
+  column-gap: 0.85rem;
+}
+
+.masonry article {
+  break-inside: avoid;
+  margin-bottom: 0.85rem;
+}
+
+@media (min-width: 700px) {
+  .masonry {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1100px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+.prose-cey p + p {
+  margin-top: 1rem;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.field {
+  min-height: 3rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(20, 20, 20, 0.15);
+  background: #fbfcea;
+  padding: 0.75rem 0.9rem;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ken {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes timer {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-enter,
+  .reveal,
+  .ticker-track,
+  .ken,
+  .hero-timer,
+  .btn {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
