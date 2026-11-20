@@ -59,7 +59,7 @@ export function Footer() {
         <NewsletterForm />
         <div className="mt-8 flex flex-col gap-3 text-sm text-cream/60 md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} CeyGo Travels. Sample content for the frontend preview. Designed and Developed by{" "}
+            © {new Date().getFullYear()} CeyGo Travels. Sample content for the frontend preview. Developed by{" "}
             <a
               href="https://www.zyntaks.lk"
               target="_blank"
