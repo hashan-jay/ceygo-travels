@@ -59,6 +59,17 @@ export function Footer() {
         <NewsletterForm />
         <div className="mt-8 flex flex-col gap-3 text-sm text-cream/60 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} CeyGo Travels. Sample content for the frontend preview.</p>
+          <p>
+            Designed and Developed by{" "}
+            <a
+              href="https://www.zyntaks.lk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cream underline decoration-cream/40 underline-offset-4 hover:text-saffron"
+            >
+              Zyntaks
+            </a>
+          </p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-cream">Privacy note</Link>
             <Link href="/credits" className="hover:text-cream">Photo credits</Link>
