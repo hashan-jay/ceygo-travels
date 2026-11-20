@@ -64,7 +64,7 @@ export function Footer() {
               href="https://www.zyntaks.lk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-cream underline decoration-cream/40 underline-offset-4 hover:text-saffron"
+              className="text-inherit hover:text-cream hover:underline hover:underline-offset-4"
             >
               Zyntaks
             </a>
